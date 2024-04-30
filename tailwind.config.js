@@ -7,10 +7,12 @@ export default {
     "./src/Components/Nav/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    colors: {
-      'gray': "#b4b4b4",
-    },
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ["Space Grotesk", "sans-serif"],
+        spaceGrotesk: ["Space Grotesk", "sans-serif"],
+      },
+    }
   },
   plugins: [],
 };

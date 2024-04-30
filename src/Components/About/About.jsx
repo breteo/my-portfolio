@@ -3,7 +3,7 @@ import "../../App.css";
 
 export default function About() {
   return (
-    <section className="container mx-auto">
+    <section className="container mx-auto pb-52 flex justify-start items-center h-screen max-h-screen">
       <svg
         version="1.1"
         xmlns="http://www.w3.org/2000/svg"
@@ -14,7 +14,6 @@ export default function About() {
         width="288px"
         height="288px"
       >
-        {" "}
         <g>
           <path
             d="M287.28,144c-0.024-5.222-2.871-10.095-5.623-14.808c-5.967-10.213-6.492-12.833-4.844-24.378	c0.758-5.31,1.541-10.8-0.44-15.645c-3.646-8.692-15.057-12.598-20.21-20.309c-2.285-3.418-3.389-7.726-4.457-11.892	c-3.67-14.304-6.608-17.041-20.836-20.776c-11.454-3.007-13.677-4.501-20.667-13.816c-3.219-4.29-6.547-8.726-11.373-10.751	c-8.709-3.558-19.58,1.735-28.651-0.069C161.12,9.754,153.424,0.761,143.997,0.72c-9.389,0.041-17.44,9.096-26.497,10.898	c-4.031,0.806-8.432,0.174-12.69-0.432C90.246,9.103,86.573,10.723,77.64,22.487c-2.638,3.475-5.366,7.068-8.78,9.349	c-7.671,5.125-19.494,4.227-26.174,10.85c-6.629,6.686-5.887,18.747-11.031,26.442c-5.132,7.682-16.383,11.347-20.03,20.043	c-3.569,8.722,1.74,19.555-0.071,28.649c-1.802,9.061-10.794,16.754-10.835,26.183c0.041,9.421,9.092,17.404,10.898,26.495	c0.803,4.032,0.174,8.433-0.432,12.69c-2.083,14.597-0.438,18.256,11.303,27.174c9.415,7.149,10.907,9.371,13.803,20.668	c3.661,14.274,6.571,17.034,20.839,20.779c11.44,3.005,13.664,4.481,20.664,13.814c8.765,11.684,12.455,13.236,27.2,11.223	c11.739-1.605,14.363-1.077,24.386,4.855c4.614,2.732,9.386,5.556,14.619,5.579c9.425-0.041,17.402-9.09,26.497-10.901	c9.09-1.803,19.61,3.568,28.336-0.006c8.695-3.648,12.593-15.056,20.307-20.21c7.679-5.132,19.479-4.213,26.174-10.849	c6.629-6.686,5.887-18.747,11.031-26.442c5.123-7.67,16.387-11.363,20.03-20.043c3.569-8.727-1.74-19.551,0.068-28.65	C278.245,161.116,287.237,153.422,287.28,144z"
@@ -33,8 +32,47 @@ export default function About() {
           </g>
         </g>
       </svg>
-      <p>
-        Hi there! My name is Brendan. Come get to know me and check out my work!
+      <p className="font-spaceGrotesk ml-8 ">
+        Hi there! My name is{" "}
+        <span
+          className="
+          animate-pulse
+          hover:before:scale-x-100 
+          hover:before:origin-left 
+          relative 
+          before:w-full 
+          before:h-0.5
+          before:origin-right
+          before:transition-transform 
+          before:duration-300 
+          before:scale-x-0
+        before:bg-black 
+          before:absolute 
+          before:left-0 
+          before:bottom-0"
+        >
+          Brendan
+        </span>
+        . Come get to know me and check out my work{" "}
+        <span
+          className="
+          animate-pulse
+          hover:before:scale-x-100 
+          relative
+          before:w-full 
+          before:h-0.5
+          before:origin-right
+          hover:before:origin-left 
+          before:transition-transform 
+          before:duration-300 
+          before:scale-x-0
+        before:bg-black 
+          before:absolute 
+          before:left-0 
+          before:bottom-0"
+        >
+          below!
+        </span>
       </p>
     </section>
   );
