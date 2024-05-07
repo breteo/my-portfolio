@@ -1,5 +1,6 @@
 import "./Home.css";
 import "../../App.css";
+import { PropTypes } from 'prop-types';
 
 export default function Home({ onClickAbout, onClickProject }) {
   return (
@@ -60,6 +61,7 @@ export default function Home({ onClickAbout, onClickProject }) {
           className="
           animate-pulse
           hover:before:scale-x-100 
+          hover:pointer
           relative
           before:w-full 
           before:h-0.5
@@ -72,6 +74,7 @@ export default function Home({ onClickAbout, onClickProject }) {
           before:absolute 
           before:left-0 
           before:bottom-0"
+          role="button"
           onClick={onClickProject}
         >
          below!
@@ -79,4 +82,9 @@ export default function Home({ onClickAbout, onClickProject }) {
       </p>
     </section>
   );
+}
+
+Home.propTypes = {
+  onClickAbout: PropTypes.func,
+  onClickProject: PropTypes.func
 }

@@ -10,6 +10,7 @@ export default {
     "./src/Components/Contact/*.{js,ts,jsx,tsx}",
     "./src/Components/Footer/*.{js,ts,jsx,tsx}",
     "./src/Components/Card/*.{js,ts,jsx,tsx}",
+    "./src/Components/ProjectCard/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {

@@ -5,7 +5,7 @@ import { mdiFileAccount } from "@mdi/js";
 
 export default function About() {
   return (
-    <section className="container mx-auto flex flex-col justify-center items-center gap-5 ">
+    <section className="mx-auto flex flex-col justify-center items-center gap-5 bg-gray-200 ">
       <h1 className="text-3xl font-bold py-9">About</h1>
       <div id="description" className="flex flex-col text-center gap-5 mx-32">
         <p>{"Good afternoon! ☕ It's nice to meet you."}</p>

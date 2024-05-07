@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 function Card({ icon, title }) {
   return (
     <>
-      <div className="flex flex-col justify-center items-center animate-pulse">
+      <div className="flex flex-col justify-center items-center animate-pulse duration-75">
         <img src={icon} alt="title" className="object-fill"/>
         <p>{title}</p>
       </div>
