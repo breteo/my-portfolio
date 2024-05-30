@@ -1,8 +1,28 @@
 import "./Nav.css";
+import Modal from "./Modal.jsx";
+import { PropTypes } from "prop-types";
 
-export default function Nav() {
+export default function Nav({
+  showMenu,
+  setShowMenu,
+  onClickAbout,
+  onClickProject,
+  onClickContact,
+}) {
+  const handleClose = () => {
+    setShowMenu(false);
+  };
+
+  const handleOpen = () => {
+    setShowMenu(true);
+  };
+
   return (
-    <nav className="container mx-auto flex justify-between items-center border-2 border-stone-300 rounded-full mt-4 drop-shadow-2xl">
+    <nav
+      className={`container mx-auto flex justify-between items-center border-2 ${
+        (showMenu ? "mt-0" : "mt-4")
+      } border-stone-300 rounded-full drop-shadow-2xl`}
+    >
       <div className="flex items-center gap-4 ml-3">
         <a href="">
           {" "}
@@ -39,12 +59,56 @@ export default function Nav() {
         </a>
       </div>
       <div className="navList pr-9">
-        <ul className="flex gap-20">
-          <a href="">About</a>
-          <a href="">Projects</a>
-          <a href="">Contact</a>
+        <ul className="sm:hidden">
+          <li>
+            <button onClick={() => handleOpen()}>Menu</button>
+            <Modal showMenu={showMenu} onClose={() => handleClose()}>
+              <div>
+                <div className="fixed min-h-screen inset-0 flex flex-col items-center justify-center w-full h-full bg-white text-black space-y-6">
+                  <button onClick={handleClose}>Close</button>
+                  <button
+                    onClick={() => {
+                      onClickAbout();
+                      handleClose();
+                    }}
+                  >
+                    About
+                  </button>
+                  <button
+                    onClick={() => {
+                      handleClose();
+                      onClickProject();
+                    }}
+                  >
+                    Projects
+                  </button>
+                  <button
+                    onClick={() => {
+                      handleClose();
+                      onClickContact();
+                    }}
+                  >
+                    Contact
+                  </button>
+                </div>
+              </div>
+            </Modal>
+          </li>
+        </ul>
+        <ul className="hidden sm:flex gap-20">
+          <button onClick={onClickAbout}>About</button>
+          <button onClick={onClickProject}>Projects</button>
+          <button onClick={onClickContact}>Contact</button>
         </ul>
       </div>
     </nav>
   );
 }
+
+Nav.propTypes = {
+  showMenu: PropTypes.bool,
+  setShowMenu: PropTypes.func,
+  onClickAbout: PropTypes.func,
+  onClickProject: PropTypes.func,
+  onClickContact: PropTypes.func,
+};

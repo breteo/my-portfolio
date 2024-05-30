@@ -1,10 +1,11 @@
 import "./Home.css";
 import "../../App.css";
-import { PropTypes } from 'prop-types';
+import { PropTypes } from "prop-types";
 
-export default function Home({ onClickAbout, onClickProject }) {
+export default function Home({ showMenu, onClickAbout, onClickProject }) {
+  
   return (
-    <section className="container mx-auto pb-52 flex justify-start items-center h-screen max-h-screen">
+    <section className="container mx-auto pb-52 flex justify-start items-center h-screen max-h-screen md:text-xl">
       <svg
         version="1.1"
         xmlns="http://www.w3.org/2000/svg"
@@ -14,6 +15,7 @@ export default function Home({ onClickAbout, onClickProject }) {
         y="0px"
         width="288px"
         height="288px"
+        className="hidden md:block"
       >
         <g>
           <path
@@ -33,24 +35,14 @@ export default function Home({ onClickAbout, onClickProject }) {
           </g>
         </g>
       </svg>
-      <p className="font-spaceGrotesk ml-8 ">
+      <p className="md:block font-spaceGrotesk md:ml-8 px-8">
         Hi there! My name is{" "}
         <span
-          className="
-          animate-pulse
-          hover:before:scale-x-100 
-          hover:before:origin-left 
-          relative 
-          before:w-full 
-          before:h-0.5
-          before:origin-right
-          before:transition-transform 
-          before:duration-300 
-          before:scale-x-0
-        before:bg-black 
-          before:absolute 
-          before:left-0 
-          before:bottom-0"
+          className={`${
+            showMenu
+              ? "hidden"
+              : "animate-pulse hover:before:scale-x-100  hover:before:origin-left  relative  before:w-full  before:h-0.5 before:origin-right before:transition-transform  before:duration-300  before:scale-x-0 before:bg-black  before:absolute  before:left-0  before:bottom-0 z-0"
+          }`}
           onClick={onClickAbout}
           role="button"
         >
@@ -58,26 +50,15 @@ export default function Home({ onClickAbout, onClickProject }) {
         </span>
         . Come get to know me and check out my work{" "}
         <span
-          className="
-          animate-pulse
-          hover:before:scale-x-100 
-          hover:pointer
-          relative
-          before:w-full 
-          before:h-0.5
-          before:origin-right
-          hover:before:origin-left 
-          before:transition-transform 
-          before:duration-300 
-          before:scale-x-0
-        before:bg-black 
-          before:absolute 
-          before:left-0 
-          before:bottom-0"
+          className={`${
+            showMenu
+              ? "hidden"
+              : "animate-pulse hover:before:scale-x-100  hover:before:origin-left  relative  before:w-full  before:h-0.5 before:origin-right before:transition-transform  before:duration-300  before:scale-x-0 before:bg-black  before:absolute  before:left-0  before:bottom-0 z-0"
+          }`}
           role="button"
           onClick={onClickProject}
         >
-         below!
+          below!
         </span>
       </p>
     </section>
@@ -85,6 +66,7 @@ export default function Home({ onClickAbout, onClickProject }) {
 }
 
 Home.propTypes = {
+  showMenu: PropTypes.bool,
   onClickAbout: PropTypes.func,
-  onClickProject: PropTypes.func
-}
+  onClickProject: PropTypes.func,
+};

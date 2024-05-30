@@ -1,0 +1,48 @@
+import PropTypes from "prop-types";
+import { useState } from "react";
+export default function Slideshow({ ProjectList }) {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const nextSlide = () => {
+    setCurrentSlide((prevSlide) => (prevSlide + 1) % ProjectList.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide(
+      (prevSlide) => (prevSlide - 1 + ProjectList.length) % ProjectList.length
+    );
+  };
+  return (
+    <div className="relative flex flex-row justify-center items-center gap-7 h-screen">
+      {ProjectList.map((Card, index) => {
+        return (
+          <div
+            className={`
+              ${index === currentSlide
+                ? "opacity-100 block animate-fadeInProject"
+                : "opacity-0 hidden"} pb-11
+            `}
+            key={index}
+          >
+            <Card key={index} className="opacity-0" />
+          </div>
+        );
+      })}
+      <button
+        className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-gray-800 text-white px-2 py-1 rounded shadow"
+        onClick={prevSlide}
+      >
+        {"<"}
+      </button>
+      <button
+        className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-gray-800 text-white px-2 py-1 rounded shadow"
+        onClick={nextSlide}
+      >
+        {">"}
+      </button>
+    </div>
+  );
+}
+
+Slideshow.propTypes = {
+  ProjectList: PropTypes.array,
+};

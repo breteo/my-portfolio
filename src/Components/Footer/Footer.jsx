@@ -1,4 +1,6 @@
 import "./Footer.css";
+import Icon from "@mdi/react";
+import { mdiArrowUpCircleOutline } from "@mdi/js";
 
 export default function Footer() {
   const scrollToTop = () => {
@@ -11,13 +13,17 @@ export default function Footer() {
   return (
     <>
       <div className="relative">
-        <a className="absolute bottom-0 right-0 w-11 animate-fadeIn" onClick={scrollToTop} href="">
-          Top
-        </a>
+        <button
+          className="absolute bottom-0 right-0 w-16 animate-fadeIn"
+          onClick={scrollToTop}
+          href=""
+        >
+          <Icon path={mdiArrowUpCircleOutline} size={2} />
+        </button>
       </div>
       <footer>
-        <div className="container mx-auto flex justify-center">
-          <p className="text-xs">
+        <div className="w-full mx-auto flex justify-center bg-gray-200">
+          <p className="text-[10px] sm:text-xs">
             Crafted by Brendan Teo 2024 © || Powered by ReactJS, TailwindCSS,
             Vercel
           </p>

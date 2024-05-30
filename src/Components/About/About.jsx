@@ -5,39 +5,45 @@ import { mdiFileAccount } from "@mdi/js";
 
 export default function About() {
   return (
-    <section className="mx-auto flex flex-col justify-center items-center gap-5 bg-gray-200 ">
-      <h1 className="text-3xl font-bold py-9">About</h1>
-      <div id="description" className="flex flex-col text-center gap-5 mx-32">
+    <section className="mx-auto h-screen max-h-screen flex flex-col justify-center items-center gap-5 bg-gray-200 scroll-m-7">
+      <h1 className="font-bold text-3xl py-3 md:py-9">About</h1>
+      <div id="description" className="container flex flex-col text-center gap-5 mx-16 md:mx-32 text-xs sm:text-s md:text-xl">
         <p>{"Good afternoon! ☕ It's nice to meet you."}</p>
-        <p>
+        <p className="md:mx-72 md:leading-8">
           Contributor and team player. Visionary, explorer, and achiever. I
           thrive on teaming up with designers and engineers to infuse software
           with beauty and clarity. My objectives revolve around refining my
-          skills and delivering top-notch work to craft delightful, purposeful
-          experiences.
+          skills and delivering top-notch work to craft delightful and purposeful
+          experiences to my clients.
         </p>
-        <div className="flex justify-center items-center">
-          <a className="flex  gap-2" href="">
+        <div className="flex justify-center items-center pt-5">
+          <a
+            className="flex gap-2"
+            href="src\assets\Brendan_Teo (1).pdf"
+            download="Brendan_Teo (1).pdf"
+          >
             <Icon path={mdiFileAccount} size={1} />
             <h2 className="font-bold">Resume</h2>
           </a>
         </div>
       </div>
-      <div className="container text-center">
-        <p className="font-bold pt-11 pb-28">
+      <div className="container flex flex-col justify-center items-center">
+        <p className="text-center font-bold pt-11 pb-2 mx-5 text-xs sm:text-s md:text-xl">
           Highly proficient in Agile freelance developing using these
           technlogies
         </p>
-        <div className="flex flex-wrap flex-row justify-evenly max-h-72 gap-x-32 p-11 mx-11">
+        <div className="flex md:flex-wrap flex-row justify-center gap-x-7 p-4 mx-11 md:gap-x-32 md:gap-y-16 md:p-11 md:mx-11 text-xs sm:text-xl">
           <Card icon="src\assets\AboutIcons\mongodb.svg" title="MongoDB" />
           <Card icon="src\assets\AboutIcons\expressjs.svg" title="ExpressJS" />
           <Card icon="src\assets\AboutIcons\react.svg" title="React" />
           <Card icon="src\assets\AboutIcons\nodejs.svg" title="NodeJS" />
         </div>
-        <p className="font-bold pt-11 pb-28">
+      </div>
+      <div className="container flex flex-col justify-center items-center">
+        <p className="text-center font-bold mx-5 pb-2 md:pt-11 text-xs sm:text-s md:text-xl">
           Proven quality and test-driven development with these frameworks
         </p>
-        <div className="flex flex-wrap flex-row justify-evenly max-h-72 gap-x-32 gap-y-16 p-11 mx-11 overflow-auto">
+        <div className="flex md:flex-wrap flex-row justify-center gap-x-9 p-4 mx-11 md:gap-x-32 md:gap-y-16 md:p-11 md:mx-11 text-xs sm:text-xl">
           <Card icon="src\assets\AboutIcons\jest.svg" title="Jest" />
           <Card icon="src\assets\AboutIcons\cypress.svg" title="Cypress" />
           <Card icon="src\assets\AboutIcons\selenium.svg" title="Selenium" />
