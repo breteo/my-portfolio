@@ -3,7 +3,7 @@ import projectData from "./project_details.json";
 import ProjectCard from "../ProjectCard/ProjectCard";
 import Slideshow from "../Slideshow/Slideshow";
 import robotPic from "../../assets/ProjectImages/robot.jpg";
-import pprPic from "../../assets/ProjectImages/PayPerRead.png";
+import pprPic from "../../assets/ProjectImages/ppr.png";
 import slugPic from "../../assets/ProjectImages/slugstore.jpg";
 import dashboardPic from "../../assets/ProjectImages/dashboard.png";
 
