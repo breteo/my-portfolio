@@ -2,6 +2,10 @@ import "./Projects.css";
 import projectData from "./project_details.json";
 import ProjectCard from "../ProjectCard/ProjectCard";
 import Slideshow from "../Slideshow/Slideshow";
+import robotPic from "../../assets/ProjectImages/robot.jpg";
+import pprPic from "../../assets/ProjectImages/PayPerRead.png";
+import slugPic from "../../assets/ProjectImages/slugstore.jpg";
+import dashboardPic from "../../assets/ProjectImages/dashboard.png";
 
 export default function Projects() {
   const ProjectCardOne = () => (
@@ -10,7 +14,7 @@ export default function Projects() {
         title={projectData.detailOne.title}
         info={projectData.detailOne.info}
         link={projectData.detailOne.link}
-        pic="src\assets\ProjectImages\robot.jpg"
+        pic={robotPic}
       />
     </div>
   );
@@ -20,7 +24,7 @@ export default function Projects() {
         title={projectData.detailTwo.title}
         info={projectData.detailTwo.info}
         link={projectData.detailTwo.link}
-        pic="src\assets\ProjectImages\PayPerRead.png"
+        pic={pprPic}
       />
     </div>
   );
@@ -30,7 +34,7 @@ export default function Projects() {
         title={projectData.detailThree.title}
         info={projectData.detailThree.info}
         link={projectData.detailThree.link}
-        pic="src\assets\ProjectImages\slugstore.jpg"
+        pic={slugPic}
       />
     </div>
   );
@@ -40,7 +44,7 @@ export default function Projects() {
         title={projectData.detailFour.title}
         info={projectData.detailFour.info}
         link={projectData.detailFour.link}
-        pic="src\assets\ProjectImages\dashboard.png"
+        pic={dashboardPic}
       />
     </div>
   );
