@@ -1,4 +1,3 @@
-import "./About.css";
 import Card from "../Card/Card.jsx";
 import Icon from "@mdi/react";
 import { mdiFileAccount } from "@mdi/js";

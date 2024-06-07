@@ -1,4 +1,3 @@
-import "./Nav.css";
 import Modal from "./Modal.jsx";
 import { PropTypes } from "prop-types";
 

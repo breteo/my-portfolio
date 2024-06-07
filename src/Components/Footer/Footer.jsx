@@ -1,4 +1,3 @@
-import "./Footer.css";
 import Icon from "@mdi/react";
 import { mdiArrowUpCircleOutline } from "@mdi/js";
 

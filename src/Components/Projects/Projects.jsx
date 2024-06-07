@@ -1,4 +1,3 @@
-import "./Projects.css";
 import projectData from "./project_details.json";
 import ProjectCard from "../ProjectCard/ProjectCard";
 import Slideshow from "../Slideshow/Slideshow";

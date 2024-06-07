@@ -1,4 +1,3 @@
-import "./Contact.css";
 import Icon from "@mdi/react";
 import {
   mdiLinkedin,

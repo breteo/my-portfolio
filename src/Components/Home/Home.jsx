@@ -1,4 +1,3 @@
-import "./Home.css";
 import "../../App.css";
 import { PropTypes } from "prop-types";
 
