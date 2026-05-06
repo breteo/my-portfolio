@@ -1,5 +1,7 @@
+"use client";
+
 import Modal from "./Modal.jsx";
-import { PropTypes } from "prop-types";
+import PropTypes from "prop-types";
 
 export default function Nav({
   showMenu,

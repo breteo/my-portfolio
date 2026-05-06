@@ -1,5 +1,7 @@
+"use client";
+
 import { useEffect } from "react";
-import { PropTypes } from "prop-types";
+import PropTypes from "prop-types";
 
 export default function Modal({ showMenu, children }) {
   useEffect(() => {

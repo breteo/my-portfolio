@@ -1,3 +1,5 @@
+"use client";
+
 import Icon from "@mdi/react";
 import {
   mdiLinkedin,
@@ -121,8 +123,8 @@ export default function Contact() {
             <p>Email</p>
           </a>
           <a
-            href="src\assets\Brendan_Teo (1).pdf"
-            download="Brendan_Teo (1).pdf"
+            href="/Brendan_Teo.pdf"
+            download="Brendan_Teo.pdf"
             className="flex flex-col items-center"
           >
             <Icon path={mdiFileAccount} size={2} />
