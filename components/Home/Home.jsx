@@ -1,5 +1,4 @@
-import "../../App.css";
-import { PropTypes } from "prop-types";
+import PropTypes from "prop-types";
 
 export default function Home({ showMenu, onClickAbout, onClickProject }) {
   

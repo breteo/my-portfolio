@@ -1,13 +1,14 @@
 import Card from "../Card/Card.jsx";
 import Icon from "@mdi/react";
 import { mdiFileAccount } from "@mdi/js";
-import mongoIcon from "../../assets/AboutIcons/mongodb.svg";
-import expressIcon from "../../assets/AboutIcons/expressjs.svg";
-import reactIcon from "../../assets/AboutIcons/react.svg";
-import nodeIcon from "../../assets/AboutIcons/nodejs.svg";
-import jestIcon from "../../assets/AboutIcons/jest.svg";
-import cypressIcon from "../../assets/AboutIcons/cypress.svg";
-import seleniumIcon from "../../assets/AboutIcons/selenium.svg";
+
+const mongoIcon = "/AboutIcons/mongodb.svg";
+const expressIcon = "/AboutIcons/expressjs.svg";
+const reactIcon = "/AboutIcons/react.svg";
+const nodeIcon = "/AboutIcons/nodejs.svg";
+const jestIcon = "/AboutIcons/jest.svg";
+const cypressIcon = "/AboutIcons/cypress.svg";
+const seleniumIcon = "/AboutIcons/selenium.svg";
 
 export default function About() {
   return (
@@ -28,8 +29,8 @@ export default function About() {
         <div className="flex justify-center items-center pt-5">
           <a
             className="flex gap-2"
-            href="src\assets\Brendan_Teo (1).pdf"
-            download="Brendan_Teo (1).pdf"
+            href="/Brendan_Teo.pdf"
+            download="Brendan_Teo.pdf"
           >
             <Icon path={mdiFileAccount} size={1} />
             <h2 className="font-bold">Resume</h2>
