@@ -1,8 +1,7 @@
 @import "tailwindcss";
 
-@theme {
-  --font-sans: "Space Grotesk", sans-serif;
-  --font-spaceGrotesk: "Space Grotesk", sans-serif;
+@theme inline {
+  --font-sans: var(--font-inter);
 
   --breakpoint-xs: 344px;
 

@@ -35,7 +35,7 @@ export default function Home({ showMenu, onClickAbout, onClickProject }) {
           </g>
         </g>
       </svg>
-      <p className="md:block font-spaceGrotesk md:ml-8 px-8">
+      <p className="md:block md:ml-8 px-8">
         Hi there! My name is{" "}
         <span
           className={`${
