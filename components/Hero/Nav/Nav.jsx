@@ -25,7 +25,7 @@ export default function Nav({
       } border-stone-300 rounded-full drop-shadow-2xl`}
     >
       <div className="flex items-center gap-4 ml-3">
-        <a href="">
+        <a href="/">
           {" "}
           <svg
             className="max-w-16 max-h-20"

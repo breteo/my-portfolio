@@ -17,7 +17,6 @@ export default function Footer() {
         <button
           className="absolute bottom-0 right-0 w-16 animate-fadeIn"
           onClick={scrollToTop}
-          href=""
         >
           <Icon path={mdiArrowUpCircleOutline} size={2} />
         </button>
