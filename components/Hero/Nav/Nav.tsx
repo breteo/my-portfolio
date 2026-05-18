@@ -11,7 +11,7 @@ import {
 
 export default function Nav() {
   return (
-    <nav className="container mx-auto flex justify-between items-center border-[2px] mt-[16px] border-stone-300 rounded-[9999px] drop-shadow-2xl">
+    <nav className="container mx-auto flex justify-between items-center border-[2px] mt-[16px] border-stone-300 rounded-full drop-shadow-2xl">
       <div className="flex items-center gap-[16px] ml-[12px]">
         <Link href="/">
           {" "}
