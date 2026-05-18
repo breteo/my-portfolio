@@ -1,6 +1,4 @@
-import PropTypes from "prop-types";
-
-export default function ProjectCard({ info, title, link, pic }) {
+export default function ProjectCard({ info, title, link, pic }: { info: string, title: string, link: string, pic: string }) {
   return (
     <div className="max-w-xs w-full  rounded-lg flex flex-row flex-wrap">
       <div className="flex flex-col justify-center items-center text-center gap-11 overflow-auto">
@@ -16,10 +14,3 @@ export default function ProjectCard({ info, title, link, pic }) {
     </div>
   );
 }
-
-ProjectCard.propTypes = {
-  info: PropTypes.string,
-  title: PropTypes.string,
-  link: PropTypes.string,
-  pic: PropTypes.string,
-};

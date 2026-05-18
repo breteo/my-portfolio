@@ -70,7 +70,6 @@ export default function Contact() {
                   <tr>
                     <td className="py-4 xl:py-8 lg-height:py-8 md-height:py-5">
                       <textarea
-                        type="text"
                         id="message"
                         name="message"
                         placeholder="Message"
