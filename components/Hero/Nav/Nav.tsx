@@ -1,26 +1,17 @@
 "use client";
 
-import Modal from "./Modal";
 import Link from "next/link";
-import { useState } from "react";
+import {
+  Sheet,
+  SheetTrigger,
+  SheetContent,
+  SheetClose,
+  SheetTitle,
+} from "@/components/ui/sheet";
 
 export default function Nav() {
-  const [showMenu, setShowMenu] = useState(false);
-
-  const handleClose = () => {
-    setShowMenu(false);
-  };
-
-  const handleOpen = () => {
-    setShowMenu(true);
-  };
-
   return (
-    <nav
-      className={`container mx-auto flex justify-between items-center border-2 ${
-        showMenu ? "mt-0" : "mt-4"
-      } border-stone-300 rounded-full drop-shadow-2xl`}
-    >
+    <nav className="container mx-auto flex justify-between items-center border-2 mt-4 border-stone-300 rounded-full drop-shadow-2xl">
       <div className="flex items-center gap-4 ml-3">
         <Link href="/">
           {" "}
@@ -59,17 +50,22 @@ export default function Nav() {
       <div className="navList pr-9">
         <ul className="sm:hidden">
           <li>
-            <button onClick={() => handleOpen()}>Menu</button>
-            <Modal showMenu={showMenu}>
-              <div>
-                <div className="fixed min-h-screen inset-0 flex flex-col items-center justify-center w-full h-full bg-white text-black space-y-6">
-                  <button onClick={handleClose}>Close</button>
-                  <button onClick={handleClose}>About</button>
-                  <button onClick={handleClose}>Projects</button>
-                  <button onClick={handleClose}>Contact</button>
-                </div>
-              </div>
-            </Modal>
+            <Sheet>
+              <SheetTrigger>Menu</SheetTrigger>
+              <SheetContent
+                side="top"
+                className="flex flex-col items-center justify-center gap-6 py-16"
+              >
+                <SheetTitle className="sr-only">Navigation</SheetTitle>
+                <SheetClose render={<Link href="/about" />}>About</SheetClose>
+                <SheetClose render={<Link href="/projects" />}>
+                  Projects
+                </SheetClose>
+                <SheetClose render={<Link href="/contact" />}>
+                  Contact
+                </SheetClose>
+              </SheetContent>
+            </Sheet>
           </li>
         </ul>
         <ul className="hidden sm:flex gap-20">
@@ -82,3 +78,4 @@ export default function Nav() {
     </nav>
   );
 }
+
