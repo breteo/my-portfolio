@@ -60,7 +60,7 @@ export default function Projects() {
 
   return (
     <section className="container mx-auto h-full">
-      <h1 className="text-center font-bold text-3xl p-11"> Projects</h1>
+      <h1 className="text-center font-bold text-[30px]/[36px] p-[44px]"> Projects</h1>
       <Slideshow ProjectList={projectList} />
     </section>
   );

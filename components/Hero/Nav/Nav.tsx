@@ -11,8 +11,8 @@ import {
 
 export default function Nav() {
   return (
-    <nav className="container mx-auto flex justify-between items-center border-2 mt-4 border-stone-300 rounded-full drop-shadow-2xl">
-      <div className="flex items-center gap-4 ml-3">
+    <nav className="container mx-auto flex justify-between items-center border-[2px] mt-[16px] border-stone-300 rounded-[9999px] drop-shadow-2xl">
+      <div className="flex items-center gap-[16px] ml-[12px]">
         <Link href="/">
           {" "}
           <svg
@@ -47,14 +47,14 @@ export default function Nav() {
           </svg>
         </Link>
       </div>
-      <div className="navList pr-9">
+      <div className="navList pr-[36px]">
         <ul className="sm:hidden">
           <li>
             <Sheet>
               <SheetTrigger>Menu</SheetTrigger>
               <SheetContent
                 side="top"
-                className="flex flex-col items-center justify-center gap-6 py-16"
+                className="flex flex-col items-center justify-center gap-[24px] py-[64px]"
               >
                 <SheetTitle className="sr-only">Navigation</SheetTitle>
                 <SheetClose render={<Link href="/about" />}>About</SheetClose>
@@ -68,7 +68,7 @@ export default function Nav() {
             </Sheet>
           </li>
         </ul>
-        <ul className="hidden sm:flex gap-20">
+        <ul className="hidden sm:flex gap-[80px]">
           <Link href="/playground">Playground</Link>
           <Link href="/about">About</Link>
           <Link href="/projects">Projects</Link>
