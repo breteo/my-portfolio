@@ -1,6 +1,6 @@
 export default function Home() {
   return (
-    <section className="container mx-auto pb-52 flex justify-start items-center h-screen max-h-screen md:text-xl">
+    <section className="container mx-auto pb-[208px] flex justify-start items-center h-screen max-h-screen md:text-[20px]/[28px]">
       <svg
         version="1.1"
         xmlns="http://www.w3.org/2000/svg"
@@ -30,7 +30,7 @@ export default function Home() {
           </g>
         </g>
       </svg>
-      <p className="md:block md:ml-8 px-8">
+      <p className="md:block md:ml-[32px] px-[32px]">
         Hi there! My name is{" "}
         <span className="animate-pulse hover:before:scale-x-100 hover:before:origin-left relative before:w-full before:h-0.5 before:origin-right before:transition-transform before:duration-300 before:scale-x-0 before:bg-black before:absolute before:left-0 before:bottom-0 z-0">
           Brendan

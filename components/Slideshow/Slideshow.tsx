@@ -14,14 +14,14 @@ export default function Slideshow({ ProjectList }) {
     );
   };
   return (
-    <div className="relative flex flex-row justify-center items-center gap-7 h-screen">
+    <div className="relative flex flex-row justify-center items-center gap-[28px] h-screen">
       {ProjectList.map((Card, index) => {
         return (
           <div
             className={`
               ${index === currentSlide
                 ? "opacity-100 block animate-fadeInProject"
-                : "opacity-0 hidden"} pb-11
+                : "opacity-0 hidden"} pb-[44px]
             `}
             key={index}
           >
@@ -30,13 +30,13 @@ export default function Slideshow({ ProjectList }) {
         );
       })}
       <button
-        className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-gray-800 text-white px-2 py-1 rounded shadow"
+        className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-gray-800 text-white px-[8px] py-[4px] rounded shadow"
         onClick={prevSlide}
       >
         {"<"}
       </button>
       <button
-        className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-gray-800 text-white px-2 py-1 rounded shadow"
+        className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-gray-800 text-white px-[8px] py-[4px] rounded shadow"
         onClick={nextSlide}
       >
         {">"}

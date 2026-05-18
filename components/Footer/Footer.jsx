@@ -23,7 +23,7 @@ export default function Footer() {
       </div>
       <footer>
         <div className="w-full mx-auto flex justify-center bg-gray-200">
-          <p className="text-[10px] sm:text-xs">
+          <p className="text-[10px] sm:text-[12px]/[16px]">
             Crafted by Brendan Teo 2024 © || Powered by ReactJS, TailwindCSS,
             Vercel
           </p>
