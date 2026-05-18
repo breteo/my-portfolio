@@ -1,6 +1,4 @@
-import PropTypes from "prop-types";
-
-function Card({ icon, title }) {
+export default function Card({ icon, title }: { icon: string, title: string }) {
   return (
     <>
       <div className="flex flex-col justify-center items-center animate-pulse duration-75">
@@ -10,10 +8,3 @@ function Card({ icon, title }) {
     </>
   );
 }
-
-Card.propTypes = {
-  icon: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired
-};
-
-export default Card;

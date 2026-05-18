@@ -1,9 +1,4 @@
-"use client";
-
-import PropTypes from "prop-types";
-
-export default function Home({ showMenu, onClickAbout, onClickProject }) {
-  
+export default function Home() {
   return (
     <section className="container mx-auto pb-52 flex justify-start items-center h-screen max-h-screen md:text-xl">
       <svg
@@ -37,27 +32,11 @@ export default function Home({ showMenu, onClickAbout, onClickProject }) {
       </svg>
       <p className="md:block md:ml-8 px-8">
         Hi there! My name is{" "}
-        <span
-          className={`${
-            showMenu
-              ? "hidden"
-              : "animate-pulse hover:before:scale-x-100  hover:before:origin-left  relative  before:w-full  before:h-0.5 before:origin-right before:transition-transform  before:duration-300  before:scale-x-0 before:bg-black  before:absolute  before:left-0  before:bottom-0 z-0"
-          }`}
-          onClick={onClickAbout}
-          role="button"
-        >
+        <span className="animate-pulse hover:before:scale-x-100 hover:before:origin-left relative before:w-full before:h-0.5 before:origin-right before:transition-transform before:duration-300 before:scale-x-0 before:bg-black before:absolute before:left-0 before:bottom-0 z-0">
           Brendan
         </span>
         . Come get to know me and check out my work{" "}
-        <span
-          className={`${
-            showMenu
-              ? "hidden"
-              : "animate-pulse hover:before:scale-x-100  hover:before:origin-left  relative  before:w-full  before:h-0.5 before:origin-right before:transition-transform  before:duration-300  before:scale-x-0 before:bg-black  before:absolute  before:left-0  before:bottom-0 z-0"
-          }`}
-          role="button"
-          onClick={onClickProject}
-        >
+        <span className="animate-pulse hover:before:scale-x-100 hover:before:origin-left relative before:w-full before:h-0.5 before:origin-right before:transition-transform before:duration-300 before:scale-x-0 before:bg-black before:absolute before:left-0 before:bottom-0 z-0">
           below!
         </span>
       </p>
@@ -65,8 +44,3 @@ export default function Home({ showMenu, onClickAbout, onClickProject }) {
   );
 }
 
-Home.propTypes = {
-  showMenu: PropTypes.bool,
-  onClickAbout: PropTypes.func,
-  onClickProject: PropTypes.func,
-};

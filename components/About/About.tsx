@@ -1,4 +1,4 @@
-import Card from "../Card/Card.jsx";
+import Card from "@/components/Card/Card";
 import Icon from "@mdi/react";
 import { mdiFileAccount } from "@mdi/js";
 
