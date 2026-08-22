@@ -16,7 +16,7 @@ const handleGmail = () => {
 
 export default function Contact() {
   return (
-    <div className="min-h-full flex flex-col mx-auto gap-[44px] bg-gray-200">
+    <div className="min-h-full flex flex-col mx-auto gap-[20px] bg-gray-200 sm:gap-[44px]">
       <h1 className="text-center font-bold text-[30px]/[36px] p-[44px]">Lets Chat!</h1>
       <div className="container block lg:flex flex-row justify-between gap-[32px] mx-auto text-center lg:text-left text-[16px]/[24px] sm:text-[20px]/[28px] md:text-[16px]/[24px] xl:text-[20px]/[28px] 2xl:text-[24px]/[32px]">
         <div id="left-half" className="flex flex-col gap-[32px] xl:gap-[44px] flex-1">
@@ -94,39 +94,39 @@ export default function Contact() {
           </div>
         </div>
       </div>
-      <div className="container mx-auto flex-1 ">
-        <hr className="border-black pb-[28px]" />
-        <div className="flex flex-row justify-evenly items-center text-center p-[20px] text-[12px]/[16px] sm:text-[16px]/[24px]">
+      <div className="container mx-auto flex-1 px-[20px] sm:px-0">
+        <hr className="border-black/20" />
+        <div className="grid grid-cols-4 items-start gap-[8px] py-[24px] text-center text-[11px]/[16px] sm:flex sm:flex-row sm:justify-evenly sm:py-[28px] sm:text-[16px]/[24px]">
           <a
             href="https://www.linkedin.com/in/breteo/"
             target="_blank"
-            className="flex flex-col items-center"
+            className="flex flex-col items-center gap-[6px] rounded-[10px] py-[8px] transition-colors hover:bg-black/5"
           >
-            <Icon path={mdiLinkedin} size={2} />
+            <Icon path={mdiLinkedin} size={1.35} />
             <p>Linkedin</p>
           </a>
           <a
             href="https://github.com/breteo"
             target="_blank"
-            className="flex flex-col items-center"
+            className="flex flex-col items-center gap-[6px] rounded-[10px] py-[8px] transition-colors hover:bg-black/5"
           >
-            <Icon path={mdiGithub} size={2} />
+            <Icon path={mdiGithub} size={1.35} />
             <p>Github</p>
           </a>
           <a
             href="mailto:bteosf@gmail.com"
             onClick={handleGmail}
-            className="flex flex-col items-center"
+            className="flex flex-col items-center gap-[6px] rounded-[10px] py-[8px] transition-colors hover:bg-black/5"
           >
-            <Icon path={mdiEmail} size={2} />
+            <Icon path={mdiEmail} size={1.35} />
             <p>Email</p>
           </a>
           <a
             href="/Brendan_Teo.pdf"
             download="Brendan_Teo.pdf"
-            className="flex flex-col items-center"
+            className="flex flex-col items-center gap-[6px] rounded-[10px] py-[8px] transition-colors hover:bg-black/5"
           >
-            <Icon path={mdiFileAccount} size={2} />
+            <Icon path={mdiFileAccount} size={1.35} />
             <p>Resume</p>
           </a>
         </div>
