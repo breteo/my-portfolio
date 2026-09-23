@@ -8,7 +8,6 @@
   --breakpoint-xs: 344px;
 
   --animate-fadeIn: fadeIn 5s ease;
-  --animate-fadeInProject: fadeInProject 3s ease;
 
   @keyframes fadeIn {
     0% {
@@ -16,17 +15,6 @@
     }
     100% {
       opacity: 1;
-    }
-  }
-
-  @keyframes fadeInProject {
-    0% {
-      opacity: 0;
-      transform: scale(0.8);
-    }
-    100% {
-      opacity: 1;
-      transform: scale(1);
     }
   }
 
