@@ -8,6 +8,7 @@ const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
+  axes: ["opsz"],
 });
 
 export const metadata: Metadata = {
