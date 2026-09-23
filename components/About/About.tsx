@@ -12,7 +12,7 @@ const seleniumIcon = "/AboutIcons/selenium.svg";
 
 export default function About() {
   return (
-    <section className="mx-auto h-screen max-h-screen flex flex-col justify-center items-center gap-[20px] bg-gray-200 scroll-m-[28px]">
+    <section className="mx-auto min-h-screen flex flex-col justify-center items-center gap-[20px] bg-gray-200 scroll-m-[28px]">
       <h1 className="font-bold text-[30px]/[36px] py-[12px] md:py-[36px]">About</h1>
       <div
         id="description"
