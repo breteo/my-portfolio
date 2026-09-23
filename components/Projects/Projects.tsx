@@ -91,58 +91,61 @@ const projects: {
 
 export default function Projects() {
   return (
-    <section className="flex min-h-screen flex-col justify-center gap-[40px] bg-[#F7F9FB] px-[24px] py-[88px] md:px-[96px] lg:pr-[316px] font-(family-name:--font-inter)">
-      <h2 className="font-semibold text-[#0B1220] text-[40px]/[44px] tracking-[-0.035em] md:text-[56px]/[60px]">
-        Projects
-      </h2>
+    <section className="flex min-h-screen flex-col justify-center bg-[#F7F9FB] px-[24px] py-[88px] md:px-[96px] font-(family-name:--font-inter)">
+      {/* Same column as the hero; the right padding keeps the grid clear of the fixed pill nav. */}
+      <div className="mx-auto flex w-full max-w-[1248px] flex-col gap-[40px] lg:pr-[220px]">
+        <h2 className="font-semibold text-[#0B1220] text-[40px]/[44px] tracking-[-0.035em] md:text-[56px]/[60px]">
+          Projects
+        </h2>
 
-      <ul className="grid w-full max-w-[1000px] gap-x-[24px] gap-y-[40px] md:grid-cols-2 xl:grid-cols-3">
-        {projects.map(({ title, description, meta, background, art }) => (
-          <li key={title} className="flex flex-col gap-[18px]">
-            <div
-              aria-hidden="true"
-              className={`relative h-[380px] overflow-clip rounded-[24px] [box-shadow:#0B12200D_0px_0px_0px_1px_inset] ${background}`}
-            >
-              {art}
-            </div>
-            <div className="flex flex-col gap-[6px]">
-              <h3 className="font-semibold text-[#0B1220] text-[20px]/[26px] tracking-[-0.02em]">
-                {title}
-              </h3>
-              <p className="text-[#6B7280] text-[15px]/[22px] tracking-[-0.005em]">
-                {description}
-              </p>
-              <p className="pt-[6px] font-semibold text-[#6B7280] text-[12px]/[16px] tracking-[0.1em] uppercase">
-                {meta}
-              </p>
-            </div>
-          </li>
-        ))}
-      </ul>
+        <ul className="grid w-full max-w-[1000px] gap-x-[24px] gap-y-[40px] md:grid-cols-2 xl:grid-cols-3">
+          {projects.map(({ title, description, meta, background, art }) => (
+            <li key={title} className="flex flex-col gap-[18px]">
+              <div
+                aria-hidden="true"
+                className={`relative h-[380px] overflow-clip rounded-[24px] [box-shadow:#0B12200D_0px_0px_0px_1px_inset] ${background}`}
+              >
+                {art}
+              </div>
+              <div className="flex flex-col gap-[6px]">
+                <h3 className="font-semibold text-[#0B1220] text-[20px]/[26px] tracking-[-0.02em]">
+                  {title}
+                </h3>
+                <p className="text-[#6B7280] text-[15px]/[22px] tracking-[-0.005em]">
+                  {description}
+                </p>
+                <p className="pt-[6px] font-semibold text-[#6B7280] text-[12px]/[16px] tracking-[0.1em] uppercase">
+                  {meta}
+                </p>
+              </div>
+            </li>
+          ))}
+        </ul>
 
-      <a
-        href="https://github.com/breteo"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="group flex w-fit items-center gap-[10px] font-medium text-[#0B1220] text-[16px]/[22px] tracking-[-0.01em]"
-      >
-        All projects
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="18"
-          height="18"
-          viewBox="0 0 18 18"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.8"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          className="shrink-0 transition-transform duration-200 group-hover:translate-x-[3px]"
-          aria-hidden="true"
+        <a
+          href="https://github.com/breteo"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group flex w-fit items-center gap-[10px] font-medium text-[#0B1220] text-[16px]/[22px] tracking-[-0.01em]"
         >
-          <path d="M3.5 9H14.5M10 4.5L14.5 9L10 13.5" />
-        </svg>
-      </a>
+          All projects
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="18"
+            height="18"
+            viewBox="0 0 18 18"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.8"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="shrink-0 transition-transform duration-200 group-hover:translate-x-[3px]"
+            aria-hidden="true"
+          >
+            <path d="M3.5 9H14.5M10 4.5L14.5 9L10 13.5" />
+          </svg>
+        </a>
+      </div>
     </section>
   );
 }

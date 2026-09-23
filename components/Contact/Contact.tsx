@@ -36,94 +36,96 @@ function handleSubmit(event: FormEvent<HTMLFormElement>) {
 export default function Contact() {
   return (
     <section className="flex min-h-screen flex-col bg-[#F7F9FB] px-[24px] pt-[96px] pb-[64px] md:px-[96px] font-(family-name:--font-inter)">
-      <h2 className="flex flex-col tracking-[-0.035em] text-[40px]/[44px] md:text-[56px]/[60px]">
-        <span className="font-semibold text-[#0B1220]">Let’s make something</span>
-        <span className="font-light text-[#6B7280]">worth shipping.</span>
-      </h2>
+      <div className="mx-auto flex w-full max-w-[1248px] grow flex-col">
+        <h2 className="flex flex-col tracking-[-0.035em] text-[40px]/[44px] md:text-[56px]/[60px]">
+          <span className="font-semibold text-[#0B1220]">Let’s make something</span>
+          <span className="font-light text-[#6B7280]">worth shipping.</span>
+        </h2>
 
-      <form
-        onSubmit={handleSubmit}
-        className="flex w-full max-w-[560px] flex-col gap-[12px] pt-[56px]"
-      >
-        <div className="grid gap-[12px] sm:grid-cols-2">
-          <input
-            type="text"
-            name="name"
+        <form
+          onSubmit={handleSubmit}
+          className="flex w-full max-w-[560px] flex-col gap-[12px] pt-[56px]"
+        >
+          <div className="grid gap-[12px] sm:grid-cols-2">
+            <input
+              type="text"
+              name="name"
+              required
+              autoComplete="name"
+              placeholder="Your name"
+              aria-label="Your name"
+              className={`h-[52px] ${fieldClass}`}
+            />
+            <input
+              type="email"
+              name="email"
+              required
+              autoComplete="email"
+              placeholder="Email address"
+              aria-label="Email address"
+              className={`h-[52px] ${fieldClass}`}
+            />
+          </div>
+          <textarea
+            name="message"
             required
-            autoComplete="name"
-            placeholder="Your name"
-            aria-label="Your name"
-            className={`h-[52px] ${fieldClass}`}
+            placeholder="What are you working on?"
+            aria-label="What are you working on?"
+            className={`h-[140px] resize-none py-[16px] leading-[22px] ${fieldClass}`}
           />
-          <input
-            type="email"
-            name="email"
-            required
-            autoComplete="email"
-            placeholder="Email address"
-            aria-label="Email address"
-            className={`h-[52px] ${fieldClass}`}
-          />
-        </div>
-        <textarea
-          name="message"
-          required
-          placeholder="What are you working on?"
-          aria-label="What are you working on?"
-          className={`h-[140px] resize-none py-[16px] leading-[22px] ${fieldClass}`}
-        />
-        <div className="pt-[12px]">
-          <button
-            type="submit"
-            className="group flex h-[48px] items-center gap-[10px] rounded-full bg-[#0B1220] pr-[22px] pl-[24px] font-medium text-white text-[15px]/[20px] tracking-[-0.01em] transition-transform active:scale-[0.98] [box-shadow:#FFFFFF24_0px_1px_0px_inset,#0B122073_0px_10px_24px_-10px]"
-          >
-            Send message
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              viewBox="0 0 16 16"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.6"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="shrink-0 transition-transform duration-200 group-hover:translate-x-[3px]"
-              aria-hidden="true"
+          <div className="pt-[12px]">
+            <button
+              type="submit"
+              className="group flex h-[48px] items-center gap-[10px] rounded-full bg-[#0B1220] pr-[22px] pl-[24px] font-medium text-white text-[15px]/[20px] tracking-[-0.01em] transition-transform active:scale-[0.98] [box-shadow:#FFFFFF24_0px_1px_0px_inset,#0B122073_0px_10px_24px_-10px]"
             >
-              <path d="M3.5 8H12.5M8.5 4L12.5 8L8.5 12" />
-            </svg>
-          </button>
-        </div>
-      </form>
-
-      <footer className="mt-auto flex flex-col gap-[28px] pt-[64px]">
-        <ul className="flex items-center gap-[12px]">
-          {socials.map(({ label, href, size, path }) => (
-            <li key={label}>
-              <a
-                href={href}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={label}
-                className="flex size-[48px] items-center justify-center rounded-full bg-[#FFFFFF99] transition-colors hover:bg-white [box-shadow:#FFFFFF_0px_0px_0px_1px_inset,#0B122012_0px_0px_0px_1px]"
+              Send message
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.6"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="shrink-0 transition-transform duration-200 group-hover:translate-x-[3px]"
+                aria-hidden="true"
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width={size}
-                  height={size}
-                  viewBox="0 0 24 24"
-                  fill="#0B1220"
-                  aria-hidden="true"
+                <path d="M3.5 8H12.5M8.5 4L12.5 8L8.5 12" />
+              </svg>
+            </button>
+          </div>
+        </form>
+
+        <footer className="mt-auto flex flex-col gap-[28px] pt-[64px]">
+          <ul className="flex items-center gap-[12px]">
+            {socials.map(({ label, href, size, path }) => (
+              <li key={label}>
+                <a
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={label}
+                  className="flex size-[48px] items-center justify-center rounded-full bg-[#FFFFFF99] transition-colors hover:bg-white [box-shadow:#FFFFFF_0px_0px_0px_1px_inset,#0B122012_0px_0px_0px_1px]"
                 >
-                  <path d={path} />
-                </svg>
-              </a>
-            </li>
-          ))}
-        </ul>
-        <p className="text-[#6B7280] text-[13px]/[18px]">© 2026 Brendan Teo</p>
-      </footer>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width={size}
+                    height={size}
+                    viewBox="0 0 24 24"
+                    fill="#0B1220"
+                    aria-hidden="true"
+                  >
+                    <path d={path} />
+                  </svg>
+                </a>
+              </li>
+            ))}
+          </ul>
+          <p className="text-[#6B7280] text-[13px]/[18px]">© 2026 Brendan Teo</p>
+        </footer>
+      </div>
     </section>
   );
 }
