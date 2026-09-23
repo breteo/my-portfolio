@@ -1,8 +1,12 @@
 "use client";
 
-import PropTypes from "prop-types";
-import { useState } from "react";
-export default function Slideshow({ ProjectList }) {
+import { useState, type ComponentType } from "react";
+
+type SlideshowProps = {
+  ProjectList: ComponentType[];
+};
+
+export default function Slideshow({ ProjectList }: SlideshowProps) {
   const [currentSlide, setCurrentSlide] = useState(0);
   const nextSlide = () => {
     setCurrentSlide((prevSlide) => (prevSlide + 1) % ProjectList.length);
@@ -14,7 +18,7 @@ export default function Slideshow({ ProjectList }) {
     );
   };
   return (
-    <div className="relative flex flex-row justify-center items-center gap-[28px] h-screen">
+    <div className="relative flex flex-row justify-center items-center gap-[28px] min-h-screen">
       {ProjectList.map((Card, index) => {
         return (
           <div
@@ -25,7 +29,7 @@ export default function Slideshow({ ProjectList }) {
             `}
             key={index}
           >
-            <Card key={index} className="opacity-0" />
+            <Card />
           </div>
         );
       })}
@@ -44,7 +48,3 @@ export default function Slideshow({ ProjectList }) {
     </div>
   );
 }
-
-Slideshow.propTypes = {
-  ProjectList: PropTypes.array,
-};
