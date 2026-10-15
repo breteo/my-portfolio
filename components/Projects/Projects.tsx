@@ -64,7 +64,7 @@ const projects: {
     title: "Anything",
     description:
       "An app builder for people who don’t code. Editor redesign and a first-app onboarding.",
-    meta: "Product design · 2025—26",
+    meta: "Frontend engineer · 2025—26",
     background:
       "bg-[linear-gradient(180deg,oklab(94.4%_-0.002_-0.008)_0%,oklab(91.7%_-0.003_-0.011)_100%)]",
     art: <BrowserArt />,
@@ -73,7 +73,7 @@ const projects: {
     title: "Skydive",
     description:
       "Agents that live in your inbox and text you back. Onboarding and messaging surfaces.",
-    meta: "Design eng · 2026",
+    meta: "Software engineer · 2026",
     background:
       "bg-[linear-gradient(180deg,oklab(93.6%_-0.002_-0.009)_0%,oklab(91.1%_-0.003_-0.012)_100%)]",
     art: <PhoneArt />,
